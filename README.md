@@ -5,10 +5,6 @@
 > 청소년의 진로 정보 접근 격차를 해소하고  
 > 성향 기반의 맞춤형 진로 로드맵을 설계하는 차세대 진로 탐색 플랫폼
 
-🚀 **MVP 배포 링크:** https://careerall.netlify.app  
-📁 **프로젝트 구조:** 백엔드(Spring Boot)는 루트, 프론트엔드(React)는 `career-navi-frontend1/` 디렉토리에 위치
-
-
 ---
 
 
@@ -239,7 +235,13 @@ streamlit run app.py
 - 자기주도 진로 설계 역량 강화 → 학습동기 상승
 
 ---
+## 📱 서비스
 
+🚀 **MVP 배포 링크:** https://careerall.netlify.app  
+📁 **프로젝트 구조:** 백엔드(Spring Boot)는 루트, 프론트엔드(React)는 `career-navi-frontend1/` 디렉토리에 위치
+
+
+---
 ## 📜 라이선스
 
 이 프로젝트는 공공데이터 기반 비영리 교육 솔루션입니다.  
