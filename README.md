@@ -12,7 +12,7 @@
 
 ## 👨‍💻 TEAM 잡스케치 (JobSketch)
 
-**잡스케치(JobSketch)**는  
+잡스케치(JobSketch)는  
 진로를 설계하고 싶은 학생들을 위해,  
 AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들기 위해 시작된 팀입니다.
 
@@ -110,10 +110,8 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 
 ## 🎯 커리어네비의 핵심 포인트
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="./img/4_page_service_advantage1.png" alt="Service Advantage 1" width="48%">
-    <img src="./img/5_page_service_advatage2.png" alt="Service Advantage 2" width="48%">
-</div>
+![Service Advantage 1](./img/4_page_service_advantage1.png)
+![Service Advantage 2](./img/5_page_service_advatage2.png)
 
 
 | 포인트 | 설명 |
@@ -252,7 +250,6 @@ streamlit run app.py
 ---
 ## 📱 서비스
 
-![Cover End](./img/17_cover_end.png)
 
 🚀 **MVP 배포 링크:** https://careerall.netlify.app  
 📁 **프로젝트 구조:** 백엔드(Spring Boot)는 루트, 프론트엔드(React)는 `career-navi-frontend1/` 디렉토리에 위치
