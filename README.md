@@ -5,7 +5,7 @@
 > 청소년의 진로 정보 접근 격차를 해소하고  
 > 성향 기반의 맞춤형 진로 로드맵을 설계하는 차세대 진로 탐색 플랫폼
 
-![대체 텍스트](./img/0_커버_시작.png)
+![Cover Start](./img/0_cover_start.png)
 
 ---
 
@@ -83,7 +83,7 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 ---
 
 ## 🧐 Problem: 청소년의 진로 정보 접근 격차
-
+![Page Problem](./img/2_page_problem.png)
 - 대부분의 청소년들은 진로 정보를 부모나 학교 진로 선생님에게 의존하고 있으며, 비대칭적이고 제한적인 정보만을 접하고 있습니다.
 - 특히 농어촌, 비수도권, 또는 저소득층 가정일수록 교육 인프라의 부족으로 인해 **공공 진로 정보에 대한 접근성**이 매우 낮습니다.
 - 학원, 상담센터 등 사교육 자원에 의존하지 않고도 **객관적이고 체계적인 진로 설계**를 할 수 있는 공공 기반 플랫폼이 부재한 상황입니다.
@@ -96,6 +96,7 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 **CareerNavi**는 교육 공공데이터를 기반으로  
 학생의 활동, 성향, 자기소개서를 AI로 분석해  
 진로 역량을 수치화하고, 적합한 전공/직업/로드맵을 추천합니다.
+![Page Solution](./img/3_page_solution.png)
 
 - 진로 활동 분석, GPT 기반 AI 진단, 공공데이터 기반 직업·전공 매칭
 - 성취도 기반 마일스톤 설계 및 진로 포트폴리오 제공
@@ -108,6 +109,12 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 ---
 
 ## 🎯 커리어네비의 핵심 포인트
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="./img/4_page_service_advantage1.png" alt="Service Advantage 1" width="48%">
+    <img src="./img/5_page_service_advatage2.png" alt="Service Advantage 2" width="48%">
+</div>
+
 
 | 포인트 | 설명 |
 |--------|------|
@@ -155,6 +162,11 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 - **저장**: 사용자별 진단 결과 DB 기록
 - **출력**: 진단 점수, 추천 직업/전공, 시각화 리포트
 
+![Operation Flow 1](./img/8_page_operation_flow_1.png)
+![Operation Flow 2](./img/9_page_operation_flow_2.png)
+![Operation Flow 3](./img/10_page_operation_flow_3.png)
+![Operation Flow 4](./img/11_page_operation_flow_4.png)
+
 ```txt
 사용자 입력
  → NLP + GPT 분석
@@ -167,16 +179,21 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 
 ## 📊 플로우 차트 / 와이어프레임
 
-> 추후 기획서 이미지 임베딩 예정
+![Wireframe 1](./img/6_page_wireframe1.png)
+![Wireframe 2](./img/7_page_wireframe2.png)
 
 - 활동 분석 → 성취도 점수화  
 - 진로 성향 검사 결과 + GPT 분석  
 - 마일스톤 자동 추천  
 - 포트폴리오 생성
 
+![Flow Chart](./img/12_page_flow_chart.png)
+
 ---
 
 ## 💼 비즈니스 모델
+
+![Business Model](./img/14_page_business_model.png)
 
 | 항목 | 내용 |
 |------|------|
@@ -198,6 +215,7 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 ---
 
 ## 📈 로드맵 및 기대효과
+![Roadmap and Expected Effect](./img/15_page_roadmap_expected_effect.png)
 
 ### 1️⃣ 개발 단계
 
@@ -216,6 +234,8 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 
 ## 🚀 실행 방법
 
+
+
 ```bash
 # 프론트엔드
 cd career-navi-frontend1
@@ -230,24 +250,9 @@ streamlit run app.py
 ```
 
 ---
-
-## 📈 로드맵 및 기대효과
-
-### 단계별 로드맵
-
-1. MVP 구축 및 사용자 피드백 확보 (완료)
-2. 공공기관 시범 도입 (예: 교육청, 지역 진로체험센터)
-3. 전국 단위 B2B 확장
-4. 글로벌 진로 정보 서비스로 확장
-
-### 기대효과
-
-- 교육 소외계층 대상 **공정한 진로 정보 제공**
-- 진단부터 설계까지 하나의 플랫폼에서 제공
-- 자기주도 진로 설계 역량 강화 → 학습동기 상승
-
----
 ## 📱 서비스
+
+![Cover End](./img/17_cover_end.png)
 
 🚀 **MVP 배포 링크:** https://careerall.netlify.app  
 📁 **프로젝트 구조:** 백엔드(Spring Boot)는 루트, 프론트엔드(React)는 `career-navi-frontend1/` 디렉토리에 위치
