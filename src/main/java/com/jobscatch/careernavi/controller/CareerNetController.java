@@ -22,4 +22,17 @@ public class CareerNetController {
     public Map<String, Object> searchJobs(@RequestParam String keyword) {
         return careerNetService.searchJobList(keyword);
     }
+
+    @GetMapping("/all")
+    public Map<String, Object> getAllJobs() {
+        return careerNetService.getAllJobList();
+    }
+
+
+    @GetMapping("/detail")
+    public Map<String, Object> getJobDetail(@RequestParam int seq) {
+        return careerNetService.getJobDetail(seq);
+    }
+
+
 }
