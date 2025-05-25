@@ -36,16 +36,18 @@ function CareerDictionary() {
         setShowDetail(true);
     };
 
-    const handleScrap = (jobCd) => {
-        const stored = JSON.parse(localStorage.getItem("scrapJobs") || "[]");
-        if (!stored.includes(jobCd)) {
-            stored.push(jobCd);
-            localStorage.setItem("scrapJobs", JSON.stringify(stored));
+    const handleScrap = async (jobCd, jobNm, jobWork) => {
+        try {
+            await axios.post("/api/favorite-jobs", { jobCd, jobNm, jobWork });
             alert("⭐ 관심 직업으로 등록되었습니다!");
-        } else {
-            alert("이미 등록된 직업입니다.");
+        } catch (err) {
+            alert("서버 오류가 발생했습니다.");
+            console.error(err);
         }
     };
+
+
+
 
     return (
         <div className="min-h-screen bg-gradient-to-r from-pink-50 to-purple-100 flex flex-col items-center py-10 px-4 font-sans">
@@ -121,11 +123,19 @@ function CareerDictionary() {
                             직업 만족도: {selectedJob.baseInfo?.satisfication} %
                         </p>
                         <button
-                            onClick={() => handleScrap(selectedJob.baseInfo?.job_cd)}
+                            onClick={() =>
+                                handleScrap(
+                                    selectedJob.baseInfo?.job_cd,
+                                    selectedJob.baseInfo?.job_nm,
+                                    selectedJob.workList?.map((w) => w.work).join(" ")
+                                )
+                            }
                             className="mt-6 px-4 py-2 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-500 transition"
                         >
                             ⭐ 관심 직업으로 등록하기
                         </button>
+
+
                     </div>
                 </div>
             )}
