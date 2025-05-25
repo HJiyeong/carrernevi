@@ -7,6 +7,8 @@ function PersonalityTest() {
     const [questions, setQuestions] = useState([]);
     const [current, setCurrent] = useState(0);
     const navigate = useNavigate();
+    const [answers, setAnswers] = useState([]);
+
 
     useEffect(() => {
         // 1. 세션 생성
@@ -26,6 +28,9 @@ function PersonalityTest() {
 
     const handleAnswer = (answerScore) => {
         const qNo = current + 1;
+
+        setAnswers(prev => [...prev, { questionNo: qNo, answerValue: answerScore }]);
+
         axios.post('/api/test/answer', {
             sessionId,
             questionNo: qNo,
@@ -35,11 +40,23 @@ function PersonalityTest() {
                 setCurrent(current + 1);
             } else {
                 alert('검사 완료! 결과 페이지로 이동합니다.');
+
+
+                const finalAnswers = [...answers, { questionNo: qNo, answerValue: answerScore }];
+                const answerString = finalAnswers
+                    .map(ans => `${ans.questionNo}=${ans.answerValue}`)
+                    .join(' ');
+
                 axios.post('/api/test/submit', {
                     sessionId,
                     userInfo: {
-                        gender: 'F',
-                        grade: '3'
+                        name: '황지영',
+                        gender: '100324',  // 여자
+                        grade: '3',
+                        school: 'DGIST',
+                        email: '',
+                        startDtm: Date.now(),
+                        answers: answerString
                     }
                 }).then(res => {
                     console.log('검사 결과:', res.data);

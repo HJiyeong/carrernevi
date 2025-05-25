@@ -12,7 +12,8 @@ import Diagnosis from "./pages/Diagnosis";
 import Activities from "./pages/Activities";
 import CareerDictionary from "./pages/CareerDictionary";
 import SearchPage from "./pages/SearchPage";
-import CalendarPage from "./pages/CalendarPage"; 
+import CalendarPage from "./pages/CalendarPage";
+import TestResult from './pages/TestResult';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/test" element={<Test />} />
         <Route path="/test/personality" element={<PersonalityTest />} />
         <Route path="/test/interest" element={<InterestTest />} />
+        <Route path="/test/result" element={<TestResult />} />
       <Route path="/analytics" element={<Analytics />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/mypage-detail" element={<MyPageDetail />} />

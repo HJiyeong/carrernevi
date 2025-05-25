@@ -150,6 +150,7 @@ public class TestService {
         body.put("apikey", apiKey);
         body.put("qestrnSeq", qno.toString());
         body.put("trgetSe", targetSe);
+        body.put("name", userInfo.get("name"));
         body.put("gender", userInfo.get("gender"));  // 100323 (남자) / 100324 (여자)
         body.put("school", userInfo.getOrDefault("school", ""));
         body.put("grade", userInfo.get("grade"));
