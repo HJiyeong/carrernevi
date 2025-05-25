@@ -11,7 +11,7 @@ function Home() {
           <nav className="flex flex-col gap-3">
             {[
               { to: "/", label: "메인" },
-              { to: "/search", label: "진로 검색" },
+              { to: "/search", label: "전공 검색" },
               { to: "/dictionary", label: "진로 백과사전" },
               { to: "/calendar", label: "진로 캘린더" },
               { to: "/settings", label: "설정" },
