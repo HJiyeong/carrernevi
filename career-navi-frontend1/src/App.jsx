@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Milestone from "./pages/Milestone";
 import Test from "./pages/Test";
+import PersonalityTest from "./pages/PersonalityTest";
+import InterestTest from "./pages/InterestTest";
 import Analytics from "./pages/Analytics";
 import Chat from "./pages/Chat";
 import MyPageDetail from "./pages/MyPageDetail";
@@ -18,6 +20,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/milestone" element={<Milestone />} />
       <Route path="/test" element={<Test />} />
+        <Route path="/test/personality" element={<PersonalityTest />} />
+        <Route path="/test/interest" element={<InterestTest />} />
       <Route path="/analytics" element={<Analytics />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/mypage-detail" element={<MyPageDetail />} />

@@ -45,8 +45,8 @@ public class ResumeService {
                 .bodyToMono(Map.class)
                 .block();
 
-        String edited = (String) ((Map) ((java.util.List) responseMap.get("choices")).get(0)).get("message").get("content");
-
+        //String edited = (String) ((Map) ((java.util.List) responseMap.get("choices")).get(0)).get("message").get("content");
+        String edited = "AI 응답 없음 (테스트용)";
         return new ResumeResponse(request.getText(), edited.trim(), "AI 첨삭 결과입니다.");
     }
 }
