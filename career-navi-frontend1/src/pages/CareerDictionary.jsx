@@ -8,6 +8,8 @@ function CareerDictionary() {
     const [hasMore, setHasMore] = useState(true);
     const [selectedJob, setSelectedJob] = useState(null);
     const [showDetail, setShowDetail] = useState(false);
+    const [showScrapPopup, setShowScrapPopup] = useState(false);
+    const [scrapList, setScrapList] = useState([]);
 
     useEffect(() => {
         loadCareers(page);
@@ -46,6 +48,21 @@ function CareerDictionary() {
         }
     };
 
+    const loadScrapList = async () => {
+        try {
+            const res = await axios.get("/data/favorite_job.json");
+            setScrapList(res.data);
+        } catch (err) {
+            console.error("스크랩 목록 불러오기 실패", err);
+        }
+    };
+
+    const deleteScrap = (jobCd) => {
+        const updated = scrapList.filter((job) => job.jobCd !== jobCd);
+        setScrapList(updated);
+        // 파일에 저장하려면 서버 API 필요 (프론트에서 json 직접 수정 불가)
+    };
+
 
 
 
@@ -68,6 +85,16 @@ function CareerDictionary() {
                 >
                     검색
                 </button>
+                <button
+                    onClick={() => {
+                        loadScrapList();
+                        setShowScrapPopup(true);
+                    }}
+                    className="mb-6 px-4 py-2 bg-yellow-300 text-black font-semibold rounded-full hover:bg-yellow-400 transition"
+                >
+                    ⭐ 나의 관심 직업 보기
+                </button>
+
             </div>
 
             {/* 결과 리스트 */}
@@ -139,6 +166,44 @@ function CareerDictionary() {
                     </div>
                 </div>
             )}
+            {showScrapPopup && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+                    <div className="bg-white w-full max-w-2xl p-6 rounded-2xl shadow-xl relative animate-popupModal max-h-[80vh] overflow-y-auto">
+                        <button
+                            onClick={() => setShowScrapPopup(false)}
+                            className="absolute top-3 right-4 text-gray-400 hover:text-black text-xl"
+                        >
+                            &times;
+                        </button>
+                        <h2 className="text-xl font-bold text-purple-700 mb-4">⭐ 나의 관심 직업 목록</h2>
+
+                        {scrapList.length > 0 ? (
+                            <ul className="space-y-4">
+                                {scrapList.map((job) => (
+                                    <li
+                                        key={job.jobCd}
+                                        className="bg-purple-50 rounded-xl p-4 shadow flex justify-between items-start"
+                                    >
+                                        <div>
+                                            <h3 className="font-bold text-lg text-purple-800">{job.jobNm}</h3>
+                                            <p className="text-sm text-gray-700 mt-1">{job.jobWork}</p>
+                                        </div>
+                                        <button
+                                            onClick={() => deleteScrap(job.jobCd)}
+                                            className="text-sm text-red-500 hover:text-red-700 font-semibold"
+                                        >
+                                            삭제
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className="text-center text-gray-500">스크랩된 직업이 없습니다.</p>
+                        )}
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 }
