@@ -17,7 +17,7 @@ function CareerDictionary() {
     }, [page]);
 
     const loadCareers = async (pageIndex) => {
-        const res = await axios.get(`/api/career/jobs?pageIndex=${pageIndex}`);
+        const res = await axios.get(`https://career-navi-backend.onrender.com/api/career/jobs?pageIndex=${pageIndex}`);
         const newCareers = res.data.jobs || [];
         if (newCareers.length === 0) {
             setHasMore(false);
@@ -28,7 +28,7 @@ function CareerDictionary() {
 
     const handleSearch = async () => {
         if (searchTerm.trim() === "") return;
-        const res = await axios.get(`/api/career/search?keyword=${searchTerm}`);
+        const res = await axios.get(`https://career-navi-backend.onrender.com/api/career/search?keyword=${searchTerm}`);
         setCareers(res.data.jobs);
         setHasMore(false);
     };
@@ -41,7 +41,7 @@ function CareerDictionary() {
 
     const handleScrap = async (jobCd, jobNm, jobWork) => {
         try {
-            await axios.post("/api/favorite-jobs", { jobCd, jobNm, jobWork });
+            await axios.post("https://career-navi-backend.onrender.com/api/favorite-jobs", { jobCd, jobNm, jobWork });
             alert("⭐ 관심 직업으로 등록되었습니다!");
         } catch (err) {
             alert("서버 오류가 발생했습니다.");
@@ -51,7 +51,7 @@ function CareerDictionary() {
 
     const loadScrapList = async () => {
         try {
-            const res = await axios.get("/data/favorite_job.json");
+            const res = await axios.get("https://career-navi-backend.onrender.com/data/favorite_job.json");
             setScrapList(res.data);
         } catch (err) {
             console.error("스크랩 목록 불러오기 실패", err);
