@@ -108,7 +108,7 @@ function Test() {
                 <div className="max-w-3xl mx-auto">
                     {/* 🔍 돋보기 이미지 (좌측 하단 배경) */}
                     <img
-                        src="public/img_6.png"
+                        src="/img_6.png"
                         alt="돋보기"
                         className="absolute left-[80px] bottom-[-10px] w-80 opacity-80 z-0"
 
@@ -116,7 +116,7 @@ function Test() {
 
                     {/* 📁 폴더 이미지 (우측 하단 배경) */}
                     <img
-                        src="public/img_7.png"
+                        src="/img_7.png"
                         alt="폴더"
                         className="absolute right-[150px] bottom-200px] w-60 opacity-0 z-0"
                     />
