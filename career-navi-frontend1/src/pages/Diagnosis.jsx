@@ -11,8 +11,8 @@ function Diagnosis() {
         const generateReport = async () => {
             try {
                 const [res1, res2] = await Promise.all([
-                    axios.get("https://career-navi-backend.onrender.com/data/result.json"),
-                    axios.get("https://career-navi-backend.onrender.com/data/favorite_job.json"),
+                    axios.get("/data/result.json"),
+                    axios.get("/data/favorite_job.json"),
                 ]);
 
                 const personality = res1.data;
