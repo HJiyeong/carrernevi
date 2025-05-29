@@ -12,14 +12,14 @@ function PersonalityTest() {
 
     useEffect(() => {
         // 1. 세션 생성
-        axios.post('/api/test/start', {
+        axios.post('https://career-navi-backend.onrender.com/api/test/start', {
             userId: 'testuser123',
             testType: '성향 검사'
         }).then(res => {
             const id = res.data.sessionId;
             setSessionId(id);
             // 2. 질문 받아오기
-            return axios.get(`/api/test/questions/${id}`);
+            return axios.get(`https://career-navi-backend.onrender.com/api/test/questions/${id}`);
         }).then(res => {
             console.log("❗ 질문 API 응답 확인:", res.data);
             setQuestions(res.data.RESULT); // ← 커리어넷 API 응답 포맷에 맞춰 수정됨
@@ -31,7 +31,7 @@ function PersonalityTest() {
 
         setAnswers(prev => [...prev, { questionNo: qNo, answerValue: answerScore }]);
 
-        axios.post('/api/test/answer', {
+        axios.post('https://career-navi-backend.onrender.com/api/test/answer', {
             sessionId,
             questionNo: qNo,
             answerValue: answerScore
@@ -47,7 +47,7 @@ function PersonalityTest() {
                     .map(ans => `${ans.questionNo}=${ans.answerValue}`)
                     .join(' ');
 
-                axios.post('/api/test/submit', {
+                .post('https://career-navi-backend.onrender.com/api/test/submit', {
                     sessionId,
                     userInfo: {
                         name: '황지영',
