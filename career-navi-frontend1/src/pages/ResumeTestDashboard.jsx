@@ -9,7 +9,7 @@ function ResumeTestDashboard() {
 
     const fetchResumes = async () => {
         try {
-            const res = await axios.get("/api/resume/all");
+            const res = await axios.get("https://career-navi-backend.onrender.com/api/resume/all");
             setDocuments(res.data || []);
         } catch (err) {
             console.error("자소서 목록 불러오기 실패 ❌", err);
