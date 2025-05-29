@@ -5,19 +5,19 @@ const recommendedData = [
         type: "직무 추천",
         title: "데이터 사이언티스트",
         description: "데이터를 분석해 의미 있는 인사이트를 찾고, 기업의 의사결정을 돕는 전문가예요!",
-        image: "/public/data.png"
+        image: "/data.png"
     },
     {
         type: "학과 추천",
         title: "컴퓨터과학과",
         description: "코딩, 알고리즘, 인공지능까지! 디지털 세상의 중심을 배우는 학과예요.",
-        image: "/public/computer.png"
+        image: "/computer.png"
     },
     {
         type: "직무 추천",
         title: "시스템엔지니어",
         description: "IT 시스템이 문제없이 돌아가도록 설계하고 관리하는 숨은 핵심 역할이에요!",
-        image: "/public/system.png"
+        image: "/system.png"
     }
 ];
 
@@ -36,7 +36,7 @@ function RecommendedSlide() {
     return (
         <div className="w-80 bg-white rounded-xl shadow-xl p-5 border border-purple-100 transition-all duration-500">
             <div className="flex items-center mb-2">
-                <img src="/public/img_1.png" alt="Curby" className="w-10 h-10 mr-2" />
+                <img src="/img_1.png" alt="Curby" className="w-10 h-10 mr-2" />
                 <div>
                     <p className="text-xs text-gray-400">{current.type}</p>
                     <h3 className="text-md font-bold text-purple-700">{current.title}</h3>
