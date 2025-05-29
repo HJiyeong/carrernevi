@@ -37,7 +37,7 @@ function Chat() {
   /* ▶ 새 세션 생성 */
   useEffect(() => {
     const init = async () => {
-      const { data } = await .post("https://career-navi-backend.onrender.com/api/chat/sessions");
+      const { data } = await axios.post("https://career-navi-backend.onrender.com/api/chat/sessions");
       setSessionId(data.sessionId);
     };
     init();
@@ -49,7 +49,7 @@ function Chat() {
   useEffect(() => {
     if (!sessionId) return;
     const fetchHistory = async () => {
-      const { data } = await .get("https://career-navi-backend.onrender.com/api/chat/messages", {
+      const { data } = await axios.get("https://career-navi-backend.onrender.com/api/chat/messages", {
         params: { sessionId },
       });
       setMessages(
@@ -64,7 +64,7 @@ function Chat() {
 
   // 세션 목록 가져오기
   const fetchSessions = async () => {
-    const { data } = await .get("https://career-navi-backend.onrender.com/api/chat/sessions");
+    const { data } = await axios.get("https://career-navi-backend.onrender.com/api/chat/sessions");
     setSessions(data);
   };
 
