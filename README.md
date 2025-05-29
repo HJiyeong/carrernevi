@@ -1,6 +1,6 @@
 <div align="center">
 
-### 🚀 지금 바로 나만의 진로 로드맵을 만들어보세요!
+### 🚀 지금 바로 나만의 진로 로드맵을 만들어보세요! (PC 전용 버전) 
 
 # 👉 [www.careernavi.kr](https://www.careernavi.kr)
 
