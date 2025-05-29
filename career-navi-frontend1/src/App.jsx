@@ -5,7 +5,7 @@ import Test from "./pages/Test";
 import PersonalityTest from "./pages/PersonalityTest";
 import InterestTest from "./pages/InterestTest";
 import Analytics from "./pages/Analytics";
-import Chat from "./pages/Chat";
+import Chat from "./pages/Chat.jsx";
 import MyPageDetail from "./pages/MyPageDetail";
 import JobLinks from "./pages/JobLinks";
 import Diagnosis from "./pages/Diagnosis";
