@@ -11,15 +11,15 @@ function Diagnosis() {
         const generateReport = async () => {
             try {
                 const [res1, res2] = await Promise.all([
-                    axios.get("/data/result.json"),
-                    axios.get("/data/favorite_job.json"),
+                    axios.get("https://career-navi-backend.onrender.com/data/result.json"),
+                    axios.get("https://career-navi-backend.onrender.com/data/favorite_job.json"),
                 ]);
 
                 const personality = res1.data;
                 const favorites = res2.data;
 
                 const response = await axios.post(
-                    "/api/report/generate",
+                    "https://career-navi-backend.onrender.com/api/report/generate",
                     {
                         typeName: personality.typeName,
                         keywords: personality.keywords,
