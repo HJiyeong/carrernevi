@@ -16,7 +16,7 @@ function ResumeEditor() {
     const handleAnalyze = async () => {
         setLoadingAnalysis(true);
         try {
-            const res = await axios.post("/api/resume/analyze", { text });
+            const res = await axios.post("https://career-navi-backend.onrender.com/api/resume/analyze", { text });
             setAnalysis(res.data.analysis.split('\n').filter(line => line.trim()));
         } catch (err) {
             console.error("분석 실패 ❌", err);
@@ -28,7 +28,7 @@ function ResumeEditor() {
     const handleRewrite = async () => {
         setLoadingRewrite(true);
         try {
-            const res = await axios.post("/api/resume/rewrite", { title, text });
+            const res = await axios.post("https://career-navi-backend.onrender.com/api/resume/rewrite", { title, text });
             setRewritten(res.data);
             setShowModal(true);
         } catch (err) {
@@ -41,7 +41,7 @@ function ResumeEditor() {
     useEffect(() => {
         const id = new URLSearchParams(window.location.search).get("id");
         if (id) {
-            axios.get(`/api/resume/${id}`).then(res => {
+            axios.get(`https://career-navi-backend.onrender.com/api/resume/${id}`).then(res => {
                 setText(res.data.text);
                 setTitle(res.data.title);
                 setAnalysis(res.data.analysis?.split?.('\n') || []);
@@ -99,7 +99,7 @@ function ResumeEditor() {
                         {/* 저장하기 수동 트리거 */}
                         <button
                             onClick={() => {
-                                axios.post("/api/resume/save", { title, text });
+                                axios.post("https://career-navi-backend.onrender.com/api/resume/save", { title, text });
                                 alert("저장되었습니다!");
                             }}
                             className="bg-purple-600 hover:bg-purple-700 text-white text-sm px-4 py-1.5 rounded-full shadow-sm transition"
