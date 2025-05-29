@@ -17,7 +17,7 @@ function CalendarPage() {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("/api/calendar");
+      const res = await axios.get("https://career-navi-backend.onrender.com/api/calendar");
       const formatted = res.data.map((event) => ({
         id: event.id,
         title: event.title,
