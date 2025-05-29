@@ -400,7 +400,7 @@ record RoadmapResponse(List<YearPlan> years){
 
                                 {/* 성공 기준 */}
                                 <div className="flex items-center gap-2 mb-4 text-sm text-gray-700">
-                                    <img src="/public/img_9.png" alt="성공기준" className="w-5 h-5" />
+                                    <img src="/img_9.png" alt="성공기준" className="w-5 h-5" />
                                     <span><b className="text-purple-700">성공 기준:</b> {openMilestone.successMetric}</span>
                                 </div>
 
