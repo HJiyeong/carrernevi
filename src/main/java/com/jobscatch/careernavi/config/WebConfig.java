@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
                 .allowedOrigins("http://localhost:5173") // React 개발 포트
-                .allowedMethods("GET", "POST")
+                .allowedMethods("GET", "POST", "OPTIONS", "DELETE", "PUT")
                 .allowCredentials(true);
     }
 }

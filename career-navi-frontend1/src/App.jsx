@@ -14,6 +14,9 @@ import CareerDictionary from "./pages/CareerDictionary";
 import SearchPage from "./pages/SearchPage";
 import CalendarPage from "./pages/CalendarPage";
 import TestResult from './pages/TestResult';
+import ResumeTestDashboard from "./pages/ResumeTestDashboard";
+import ResumeEditor from "./pages/ResumeEditor";
+import Grade from "./pages/Grade"; // 상단에 추가
 
 function App() {
   return (
@@ -23,7 +26,11 @@ function App() {
       <Route path="/test" element={<Test />} />
         <Route path="/test/personality" element={<PersonalityTest />} />
         <Route path="/test/interest" element={<InterestTest />} />
-        <Route path="/test/result" element={<TestResult />} />
+        <Route path="/test/result" element={<Diagnosis />} />
+        <Route path="/test/resume" element={<ResumeTestDashboard />} />
+        <Route path="/test/resume/editor" element={<ResumeEditor />} />
+        <Route path="/test/preference" element={<CareerDictionary />} />
+        <Route path="/test/activity" element={<Activities />} />
       <Route path="/analytics" element={<Analytics />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/mypage-detail" element={<MyPageDetail />} />
@@ -32,7 +39,8 @@ function App() {
       <Route path="/activities" element={<Activities />} />
       <Route path="/dictionary" element={<CareerDictionary />} />
       <Route path="/search" element={<SearchPage />} />
-      <Route path="/calendar" element={<CalendarPage />} /> 
+      <Route path="/calendar" element={<CalendarPage />} />
+        <Route path="/grade" element={<Grade />} />
     </Routes>
   );
 }

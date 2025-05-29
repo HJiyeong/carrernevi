@@ -14,7 +14,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 @RequestMapping("/api/favorite-jobs")
 public class FavoriteJobController {
 
-    private static final Path FILE_PATH = Paths.get(System.getProperty("user.dir"), "career-navi-frontend1", "favorite_job.json");
+    private static final Path FILE_PATH = Paths.get(System.getProperty("user.dir"), "career-navi-frontend1", "public", "data", "favorite_job.json");
 
     private static final ObjectMapper mapper = new ObjectMapper();
 

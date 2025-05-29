@@ -6,5 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ResumeRequest {
+    private String title;
     private String text;
 }
