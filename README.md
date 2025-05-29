@@ -1,3 +1,11 @@
+<div align="center">
+
+### 🚀 지금 바로 나만의 진로 로드맵을 만들어보세요!
+
+# 👉 [www.careernavi.kr](https://www.careernavi.kr)
+
+</div>
+
 # 🧭 CareerNavi: AI 기반 진로 설계 및 추천 서비스
 
 
