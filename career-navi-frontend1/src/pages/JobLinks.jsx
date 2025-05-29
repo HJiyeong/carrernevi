@@ -121,7 +121,7 @@ record RoadmapResponse(List<YearPlan> years){
 }
 `;
 
-        const res = await axios.post("/api/roadmap/generate-custom", {
+        const res = await axios.post("https://career-navi-backend.onrender.com/api/roadmap/generate-custom", {
           prompt: fullPrompt,
         });
 
