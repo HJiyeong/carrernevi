@@ -62,7 +62,7 @@ AI와 공공데이터를 활용한 진짜 ‘진로 설계 도구’를 만들�
 데이터와 알고리즘, 그리고 서비스 설계로 해결하고자 하는  
 **실전형 빌더 팀**입니다.
 
-이제 CareerNavi는 MVP를 넘어,  
+이제 CareerNavi는 단순 서비스 기획을 넘어,  
 실제 학교와 교육청에서 사용될 수 있는  
 **실질적인 진로 탐색 도구**로 진화하는 중입니다.
 
@@ -315,6 +315,7 @@ CareerNavi는 단순히 진로를 탐색하는 것을 넘어서,
 ### 1️⃣ 개발 단계
 
 - [x] MVP 개발 및 테스트 완료 (배포 링크: https://careerall.netlify.app)
+- [x] 실제 웹서비스 구현 (사이트 링크: https://www.careernavi.kr)
 - [ ] 사용자 피드백 수집 및 개선
 - [ ] 지자체 및 교육청 대상 B2G 서비스 제안 예정
 
@@ -323,33 +324,6 @@ CareerNavi는 단순히 진로를 탐색하는 것을 넘어서,
 - 진로 정보 비대칭 해소 및 지역 격차 완화
 - 공공데이터 기반 진로 서비스의 선도 모델 제시
 - 청소년의 **자기주도적 진로 설계 역량 강화**
-
----
-
-
-## 🚀 실행 방법
-
-
-
-```bash
-# 프론트엔드
-cd career-navi-frontend1
-npm install && npm run dev
-
-# 백엔드
-./gradlew bootRun
-
-# Streamlit 대시보드
-cd streamlit-dashboard
-streamlit run app.py
-```
-
----
-## 📱 서비스
-
-
-🚀 **MVP 배포 링크:** https://careerall.netlify.app  
-📁 **프로젝트 구조:** 백엔드(Spring Boot)는 루트, 프론트엔드(React)는 `career-navi-frontend1/` 디렉토리에 위치
 
 
 ---
