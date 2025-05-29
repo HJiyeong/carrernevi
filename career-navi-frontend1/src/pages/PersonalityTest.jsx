@@ -47,7 +47,7 @@ function PersonalityTest() {
                     .map(ans => `${ans.questionNo}=${ans.answerValue}`)
                     .join(' ');
 
-                .post('https://career-navi-backend.onrender.com/api/test/submit', {
+                axios.post('https://career-navi-backend.onrender.com/api/test/submit', {
                     sessionId,
                     userInfo: {
                         name: '황지영',
