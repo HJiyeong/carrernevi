@@ -42,42 +42,61 @@ export default function MyPageDetail() {
 
   /* ───── 차트 데이터 (샘플) ───── */
   const labels    = Array.from({ length: 12 }, (_, i) => `${i + 1}월`);
-  const myScores  = [30, 50, 45, 60, 55, 40, 50, 65, 75, 60, 58, 62];
-  const avgScores = [50, 48, 52, 49, 53, 50, 55, 57, 60, 59, 57, 58];
-  const chartData = {
-    labels,
-    datasets: [
-      {
-        label: "내 점수",
-        data: myScores,
-        fill: true,
-        tension: 0.4,
-        borderWidth: 2,
-        pointRadius: 4,
-        borderColor: ctx => {
-          const g = ctx.chart.ctx.createLinearGradient(0, 0, ctx.chart.width, 0);
-          g.addColorStop(0, "#8b5cf6");
-          g.addColorStop(1, "#ec4899");
-          return g;
-        },
-        backgroundColor: "rgba(139,92,246,0.15)",
+  const yearScores = {
+  2024: {
+    my:  [42, 44, 46, 50, 53, 52, 54, 56, 58, 59, 61, 63],
+    avg: [48, 47, 49, 50, 52, 51, 53, 54, 56, 55, 57, 58],
+  },
+  2025: {
+    my:  [30, 50, 45, 60, 55, 40, 50, 65, 75, 60, 58, 62],
+    avg: [50, 48, 52, 49, 53, 50, 55, 57, 60, 59, 57, 58],
+  },
+};
+
+  
+
+const chartData = {
+  labels,
+  datasets: [
+    {
+      label: "내 점수",
+      data: yearScores[year]?.my || [],
+      fill: true,
+      tension: 0.4,
+      borderWidth: 2,
+      pointRadius: 4,
+      borderColor: ctx => {
+        const g = ctx.chart.ctx.createLinearGradient(0, 0, ctx.chart.width, 0);
+        g.addColorStop(0, "#8b5cf6");
+        g.addColorStop(1, "#ec4899");
+        return g;
       },
-      {
-        label: "평균",
-        data: avgScores,
-        borderColor: "#22d3ee",
-        borderWidth: 2,
-        tension: 0.4,
-        pointRadius: 0,
-      },
-    ],
-  };
+      backgroundColor: "rgba(139,92,246,0.15)",
+    },
+    {
+      label: "평균",
+      data: yearScores[year]?.avg || [],
+      borderColor: "#22d3ee",
+      borderWidth: 2,
+      tension: 0.4,
+      pointRadius: 0,
+    },
+  ],
+};
+
+
+  
   const chartOptions = {
     responsive: true,
     animation: { duration: 1200 },
     plugins: { legend: { position: "right" } },
     scales: { y: { beginAtZero: true, ticks: { stepSize: 20 } } },
   };
+
+  if (!yearScores[year]) {
+  return <p className="text-center text-red-500 py-32">해당 연도의 점수 데이터가 없습니다.</p>;
+}
+
 
   if (loading) return <p className="py-32 text-center text-gray-500">불러오는 중…</p>;
 
