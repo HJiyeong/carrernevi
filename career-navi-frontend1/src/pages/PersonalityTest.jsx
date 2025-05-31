@@ -61,7 +61,7 @@ function PersonalityTest() {
                 }).then(res => {
                     console.log('검사 결과:', res.data);
                     // 결과 페이지로 이동 (필요 시 state에 결과 전달 가능)
-                    navigate('/test/result', { state: { result: res.data } });
+                    navigate('/test/result_personality', { state: { result: res.data } });
                 });
             }
         });
