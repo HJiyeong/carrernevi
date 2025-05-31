@@ -40,7 +40,7 @@ function CalendarPage() {
   const handleAddEvent = async () => {
     if (!newEvent.date || !newEvent.title) return;
     try {
-      await axios.post("/api/calendar", newEvent);
+      await axios.post("https://career-navi-backend.onrender.com/api/calendar", newEvent);
       setNewEvent({ date: "", title: "" });
       setModalOpen(false);
       fetchEvents();
@@ -51,7 +51,7 @@ function CalendarPage() {
 
   const handleDeleteEvent = async (id) => {
     try {
-      await axios.delete(`/api/calendar/${id}`);
+      await axios.delete(`https://career-navi-backend.onrender.com/api/calendar/${id}`);
       fetchEvents();
     } catch (err) {
       console.error("이벤트 삭제 실패 ❌", err);
