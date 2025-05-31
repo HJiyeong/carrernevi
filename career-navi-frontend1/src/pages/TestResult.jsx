@@ -16,7 +16,7 @@ function TestResult() {
                 <p className="mb-6">아래 버튼을 눌러 커리어넷 결과 페이지로 이동하세요.</p>
 
                 <a
-                    href={result.url}
+                    href={result.reportUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl transition"
