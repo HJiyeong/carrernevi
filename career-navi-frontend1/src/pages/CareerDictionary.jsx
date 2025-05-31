@@ -34,7 +34,7 @@ function CareerDictionary() {
     };
 
     const handleCardClick = async (jobCd) => {
-        const res = await axios.get(`/api/career/detail?seq=${jobCd}`);
+        const res = await axios.get(`https://career-navi-backend.onrender.com/api/career/detail?seq=${jobCd}`);
         setSelectedJob(res.data);
         setShowDetail(true);
     };
