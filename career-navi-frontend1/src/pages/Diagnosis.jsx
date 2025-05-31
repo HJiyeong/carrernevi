@@ -125,7 +125,7 @@ function Diagnosis() {
                 <div className="relative max-w-3xl mx-auto mt-10">
                     <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
                         <img
-                            src="/public/pin.png"
+                            src="/pin.png"
                             alt="Pin"
                             className="w-[40px] h-[40px] drop-shadow-lg"
                         />
