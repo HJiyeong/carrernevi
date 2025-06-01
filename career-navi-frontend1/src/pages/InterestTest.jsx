@@ -56,7 +56,7 @@ function InterestTest() {
                     }
                 }).then(res => {
                     console.log('검사 결과:', res.data);
-                    navigate('/test/result_interest', { state: { result: res.data } });
+                    navigate('/test/result_personality', { state: { result: res.data } });
                 });
             }
         });
