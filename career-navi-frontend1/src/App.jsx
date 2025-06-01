@@ -24,20 +24,19 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-              <Route path="/settings" element={< Setting/>} />
-        <Route path="/logout" element={< Logout/>} />
+      <Route path="/settings" element={< Setting/>} />
+      <Route path="/logout" element={< Logout/>} />
       <Route path="/milestone" element={<Milestone />} />
       <Route path="/test" element={<Test />} />
-        <Route path="/test/personality" element={<PersonalityTest />} />
+      <Route path="/test/personality" element={<PersonalityTest />} />
       <Route path="/test/result_personality" element={<TestResult />} />
-        <Route path="/test/interest" element={<InterestTest />} />
+      <Route path="/test/interest" element={<InterestTest />} />
       <Route path="/test/result_personality" element={<TestResult />} /> 
-      
-        <Route path="/test/result" element={<Diagnosis />} />
-        <Route path="/test/resume" element={<ResumeTestDashboard />} />
-        <Route path="/test/resume/editor" element={<ResumeEditor />} />
-        <Route path="/test/preference" element={<CareerDictionary />} />
-        <Route path="/test/activity" element={<Activities />} />
+      <Route path="/test/result" element={<Diagnosis />} />
+      <Route path="/test/resume" element={<ResumeTestDashboard />} />
+      <Route path="/test/resume/editor" element={<ResumeEditor />} />
+      <Route path="/test/preference" element={<CareerDictionary />} />
+      <Route path="/test/activity" element={<Activities />} />
       <Route path="/analytics" element={<Analytics />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/mypage-detail" element={<MyPageDetail />} />
@@ -47,7 +46,7 @@ function App() {
       <Route path="/dictionary" element={<CareerDictionary />} />
       <Route path="/search" element={<SearchPage />} />
       <Route path="/calendar" element={<CalendarPage />} />
-        <Route path="/grade" element={<Grade />} />
+      <Route path="/grade" element={<Grade />} />
     </Routes>
   );
 }
