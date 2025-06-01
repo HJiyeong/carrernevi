@@ -17,11 +17,15 @@ import TestResult from './pages/TestResult';
 import ResumeTestDashboard from "./pages/ResumeTestDashboard";
 import ResumeEditor from "./pages/ResumeEditor";
 import Grade from "./pages/Grade"; // 상단에 추가
+import Setting from "./pages/Setting" ;
+import Logout from "./pages/Logout" ;
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+              <Route path="/settings" element={< Setting/>} />
+        <Route path="/logout" element={< Logout/>} />
       <Route path="/milestone" element={<Milestone />} />
       <Route path="/test" element={<Test />} />
         <Route path="/test/personality" element={<PersonalityTest />} />
