@@ -27,6 +27,10 @@ function PersonalityTest() {
     }, []);
 
     const handleAnswer = (answerScore) => {
+        if (!sessionId) {
+            alert("세션 생성이 아직 완료되지 않았습니다. 잠시만 기다려 주세요.");
+            return;
+        }
         const qNo = current + 1;
 
         setAnswers(prev => [...prev, { questionNo: qNo, answerValue: answerScore }]);
@@ -58,11 +62,13 @@ function PersonalityTest() {
                         startDtm: Date.now(),
                         answers: answerString
                     }
-                }).then(res => {
-                    console.log('검사 결과:', res.data);
-                    // 결과 페이지로 이동 (필요 시 state에 결과 전달 가능)
-                    navigate('/test/result_personality', { state: { result: res.data } });
-                });
+            }).then(res => {
+                console.log('검사 결과:', res.data);
+                navigate('/test/result_personality', { state: { result: res.data } });
+            }).catch(err => {
+                console.error('❌ 제출 실패:', err.response?.data || err.message);
+                alert("제출 중 오류가 발생했습니다. 다시 시도해주세요.");
+            });
             }
         });
     };
