@@ -25,6 +25,7 @@ function App() {
       <Route path="/milestone" element={<Milestone />} />
       <Route path="/test" element={<Test />} />
         <Route path="/test/personality" element={<PersonalityTest />} />
+      <Route path="/test/result_personality" element={<TestResult />} />
         <Route path="/test/interest" element={<InterestTest />} />
       <Route path="/test/result_personality" element={<TestResult />} /> 
       
