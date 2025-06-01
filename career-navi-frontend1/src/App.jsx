@@ -14,11 +14,13 @@ import CareerDictionary from "./pages/CareerDictionary";
 import SearchPage from "./pages/SearchPage";
 import CalendarPage from "./pages/CalendarPage";
 import TestResult from './pages/TestResult';
+import TestResult2 from './pages/TestResult2';
 import ResumeTestDashboard from "./pages/ResumeTestDashboard";
 import ResumeEditor from "./pages/ResumeEditor";
 import Grade from "./pages/Grade"; // 상단에 추가
 import Setting from "./pages/Setting" ;
 import Logout from "./pages/Logout" ;
+
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
       <Route path="/test" element={<Test />} />
       <Route path="/test/personality" element={<PersonalityTest />} />
       <Route path="/test/result_personality" element={<TestResult />} />
+      <Route path="/test/result_interest" element={<TestResult2 />} />
+      
       <Route path="/test/interest" element={<InterestTest />} />
       <Route path="/test/result_personality" element={<TestResult />} /> 
       <Route path="/test/result" element={<Diagnosis />} />
