@@ -15,7 +15,7 @@ import SearchPage from "./pages/SearchPage";
 import CalendarPage from "./pages/CalendarPage";
 
 import TestResult from './pages/TestResult';
-import TestResult2 from './pages/TestResult2';
+
 
 import ResumeTestDashboard from "./pages/ResumeTestDashboard";
 import ResumeEditor from "./pages/ResumeEditor";
